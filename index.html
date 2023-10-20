@@ -6,5 +6,10 @@
 </head>
 
 <script>
-	window.location.href = navigator.language.split("-")[0]
+	if (navigator.language.split("-")[0] !== "en" && navigator.language.split("-")[0] !== "nl") {
+		window.location.href = "./en"
+		console.log("English redirect")
+	} else {
+		window.location.href = navigator.language.split("-")[0]
+	}
 </script>
